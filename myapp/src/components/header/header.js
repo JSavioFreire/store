@@ -1,5 +1,5 @@
 import { HeaderAll,Logo,InputSeach,RightHeader,User,Icon,MyC,Cart } from "./styledHeader"
-import { Eighty } from "../../provider/styleGlobal/styleGlobal"
+import { Eighty } from "../../styleGlobal/styleGlobal"
 import {RiUserLine} from 'react-icons/ri'
 import {BsCart2} from 'react-icons/bs'
 

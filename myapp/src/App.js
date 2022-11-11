@@ -1,7 +1,8 @@
 import Header from "./components/header/header";
 import Menu from "./components/menu/menu";
 import Banner from "./components/banner/banner";
-import { GlobalStyle } from "./provider/styleGlobal/styleGlobal";
+import Product from "./components/products/products";
+import { GlobalStyle } from "./styleGlobal/styleGlobal";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
     <Header/>
     <Menu/>
     <Banner/>
+    <Product/>
     </>
   );
 }
