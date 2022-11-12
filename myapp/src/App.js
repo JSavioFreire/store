@@ -8,6 +8,7 @@ import { useState } from "react";
 function App() {
 const [itensCart, setItensCart] = useState([])
 
+
   const addCart = (product) =>{
     setItensCart([...itensCart, product])
   }

@@ -21,8 +21,6 @@ export default function Header({itensCart}){
         }
     },[itensCart])
     
-
-
     const OpenCart = ()=>{
         setCartOpening(true)
     }
