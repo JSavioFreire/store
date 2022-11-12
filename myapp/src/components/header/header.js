@@ -3,7 +3,13 @@ import { Eighty } from "../../styleGlobal/styleGlobal"
 import {RiUserLine} from 'react-icons/ri'
 import {BsCart2} from 'react-icons/bs'
 
-export default function Header(){
+export default function Header({itensCart}){
+
+    const OpenCart = ()=>{
+        console.log(itensCart)
+    }
+
+
     return(
         <HeaderAll>
             <Eighty>
@@ -18,7 +24,7 @@ export default function Header(){
                             Minha Conta
                         </MyC>
                     </User>
-                    <Cart>
+                    <Cart onClick={OpenCart}>
                         <Icon>
                             <BsCart2/>
                         </Icon>
