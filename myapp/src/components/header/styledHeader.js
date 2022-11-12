@@ -70,7 +70,7 @@ export const MyC = styled.div`
 export const CartOpen = styled.div`
     position: absolute;
     width: 300px;
-    min-height: 500px;
+    min-height: 400px;
     z-index: 3;
     right: 80px;
     background-color: var(--colorLightGray);
@@ -92,14 +92,14 @@ export const ItensCarts = styled.div`
 `
 export const EachItem = styled.div`
     width: 100%;
-    height: 100px;
+    height: 70px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 `
 export const EachImg = styled.img`
-    width: 30%;
-    height: 80px;
+    width: 20%;
+    height: 50px;
 `
 export const EachDiv = styled.div`
     width: 60%;
@@ -113,4 +113,32 @@ export const EachDivTitle =styled.p`
 `
 export const EachDivPrice =styled.p`
     
+`
+export const Emptys = styled.h2`
+    font-size: 15px;
+    color: gray;
+    text-align: center;
+    margin-top: 30px ;
+`
+export const BtPay = styled.button`
+    width: 100px;
+    height: 50px;
+    background-color: var(--colorBlue);
+    color: var(--colorWhite);
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--colorBlue);
+    transition: .2s;
+    cursor: pointer;
+    :hover{
+        background-color: #5292FF;
+        box-shadow: 0 0 10px #5292FF;
+
+    }
+`
+export const Flex = styled.div`
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
 `

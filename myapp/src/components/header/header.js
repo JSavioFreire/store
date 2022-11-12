@@ -1,16 +1,29 @@
-import { HeaderAll,Logo,InputSeach,RightHeader,User,Icon,MyC,Cart,CartOpen,TitleCart,ItensCarts } from "./styledHeader"
+import { HeaderAll,Logo,InputSeach,RightHeader,User,Icon,MyC,Cart,CartOpen,TitleCart,ItensCarts,Emptys,BtPay,Flex } from "./styledHeader"
 import { Eighty } from "../../styleGlobal/styleGlobal"
 import {RiUserLine} from 'react-icons/ri'
 import {BsCart2} from 'react-icons/bs'
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import EachItemCart from "./EachItemCart"
 
 export default function Header({itensCart}){
 
     const [cartOpening, setCartOpening] = useState(false)
+    const [empty, setEmpty] = useState(true)
+    const lengthCart = itensCart.length
+
+
+    useEffect(()=>{
+        if(lengthCart === 0){
+            setEmpty(true)
+        }
+        else{
+            setEmpty(false)
+        }
+    },[itensCart])
+    
+
 
     const OpenCart = ()=>{
-        console.log(itensCart)
         setCartOpening(true)
     }
 
@@ -43,9 +56,15 @@ export default function Header({itensCart}){
             <CartOpen>
                 <TitleCart>Meu Carrinho</TitleCart>
                 <ItensCarts>
-                    {itensCart.map((product)=>(
-                        <EachItemCart img={product.image} title={product.title} price={product.price}/>
-                    ))}
+                    {empty ?
+                        <Emptys>O meu carrinho está vazio :(</Emptys>
+                    :
+                    <Flex>
+                        {itensCart.map((product)=>( 
+                            <EachItemCart key={product.id} img={product.image} title={product.title} price={product.price}/>
+                                ))}
+                        <BtPay>Pagar Agora</BtPay>
+                    </Flex>}
                 </ItensCarts>
             </CartOpen>)}
         </HeaderAll>
