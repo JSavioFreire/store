@@ -44,7 +44,7 @@ export default function Header({itensCart}){
                 <TitleCart>Meu Carrinho</TitleCart>
                 <ItensCarts>
                     {itensCart.map((product)=>(
-                        <EachItemCart img={product.image} title={product.title}/>
+                        <EachItemCart img={product.image} title={product.title} price={product.price}/>
                     ))}
                 </ItensCarts>
             </CartOpen>)}

@@ -1,10 +1,13 @@
-import { EachItem,EachImg,EachDiv } from "./styledHeader"
+import { EachItem,EachImg,EachDiv,EachDivTitle,EachDivPrice } from "./styledHeader"
 
-const EachItemCart = ({img,title}) => {
+const EachItemCart = ({img,title,price}) => {
   return (
     <EachItem>
         <EachImg src={img}/>
-        <EachDiv>{title}</EachDiv>
+        <EachDiv>
+            <EachDivTitle>{title}</EachDivTitle>
+            <EachDivPrice>R$ {price}</EachDivPrice>
+        </EachDiv>
     </EachItem>
   )
 }

@@ -104,4 +104,13 @@ export const EachImg = styled.img`
 export const EachDiv = styled.div`
     width: 60%;
     height: 80px;
+    `
+export const EachDivTitle =styled.p`
+    width: 100%;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: clip; 
+`
+export const EachDivPrice =styled.p`
+    
 `
