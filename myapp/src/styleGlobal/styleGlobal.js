@@ -16,6 +16,9 @@ export const GlobalStyle = createGlobalStyle`
     font-family: Open-Sans, Helvetica, Sans-Serif;
     background-color: var(--colorLightGray) ;
   }
+  .opening{
+    right: 0;
+  }
 `;
 
 export const Eighty = styled.div`
@@ -24,4 +27,7 @@ export const Eighty = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-around;
+    @media screen and (max-width: 700px){
+      width: 100%;
+    }
 `

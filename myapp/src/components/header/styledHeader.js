@@ -25,6 +25,10 @@ export const InputSeach = styled.input`
     :focus{
         outline: none;
     }
+    @media screen and (max-width: 700px){
+      width: 90%;
+      margin-left: 10px;
+    }
 `
 export const RightHeader = styled.div`
     width: 20%;
@@ -148,7 +152,7 @@ export const Flex = styled.div`
 `
 export const Exit = styled.div`
     position: absolute;
-    top: 0;
+    top: 10px;
     right: 10px;
     width: 50px;
     height: 50px;
@@ -170,4 +174,32 @@ export const Strong = styled.p`
     margin-top: -5px;
 `
 export const Div = styled.div`
+`
+export const MenuMobile = styled.div`
+    font-size: 45px;
+    margin-top: 10px;  
+    display: none;
+    @media screen and (max-width:700px){
+        display: block;
+    }
+`
+export const MenuOpen = styled.div`
+    width: 60%;
+    position: fixed;
+    background-color: var(--colorLightGray);
+    top: 0;
+    right: -80%;
+    height: 100vh;
+    z-index: 5;
+    display: none;
+    transition: .4s;
+
+    @media screen and (max-width:700px){
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+`
+export const UserMobile = styled.div`
+    font-size: 50px;
 `

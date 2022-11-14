@@ -1,15 +1,16 @@
-import { HeaderAll,Logo,InputSeach,RightHeader,User,Icon,MyC,Cart,CartOpen,TitleCart,ItensCarts,Emptys,BtPay,Flex,Exit,Total,FlexBottom,Strong,Div } from "./styledHeader"
+import { HeaderAll,Logo,InputSeach,RightHeader,User,Icon,MyC,Cart,CartOpen,TitleCart,ItensCarts,Emptys,BtPay,Flex,Exit,Total,FlexBottom,Strong,Div,MenuMobile,MenuOpen,UserMobile } from "./styledHeader"
 import { Eighty } from "../../styleGlobal/styleGlobal"
 import {RiUserLine} from 'react-icons/ri'
 import {AiFillCloseCircle} from 'react-icons/ai'
 import {BsCart2} from 'react-icons/bs'
 import { useEffect, useState } from "react"
-import MenuMobile from "../menuMobile/MenuMobile"
 import EachItemCart from "./EachItemCart"
+import {IoMdMenu} from "react-icons/io"
 
 export default function Header({itensCart}){
 
     const [cartOpening, setCartOpening] = useState(false)
+    const [menuMobile, setMenuMobile] = useState(false)
     const [empty, setEmpty] = useState(true)
     const lengthCart = itensCart.length
 
@@ -33,10 +34,18 @@ export default function Header({itensCart}){
     return(
         <HeaderAll>
             <Eighty>
-                <MenuMobile/>
                 <Logo>Logo</Logo>
                 <InputSeach placeholder="O que você está procurando?"/>
                 <RightHeader>
+                    <MenuMobile onClick={()=>{setMenuMobile(true)}}><IoMdMenu/></MenuMobile>
+                    <MenuOpen className={menuMobile? 'opening' : ''}>
+                    <Exit onClick={()=>{setMenuMobile(false)}}><AiFillCloseCircle/></Exit>
+                        <UserMobile>
+                            <RiUserLine/>
+                        </UserMobile>
+                    </MenuOpen>
+                    
+
                     <User>
                         <Icon>
                             <RiUserLine/>
@@ -45,8 +54,7 @@ export default function Header({itensCart}){
                             Minha Conta
                         </MyC>
                     </User>
-                    <Cart onClick={()=>{setCartOpening(true)
-}}>
+                    <Cart onClick={()=>{setCartOpening(true)}}>
                         <Icon>
                             <BsCart2/>
                         </Icon>
@@ -62,7 +70,7 @@ export default function Header({itensCart}){
                 <TitleCart>Meu Carrinho</TitleCart>
                 <ItensCarts>
                     {empty ?
-                        <Emptys>O meu carrinho está vazio :(</Emptys>
+                        <Emptys>O meu carrinho está vazio :</Emptys>
                     :
                     <Flex>
                         {itensCart.map((product)=>( 
