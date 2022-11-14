@@ -35,6 +35,9 @@ export const EachProd = styled.div`
     cursor: pointer;
     justify-content: center;
     padding-top: 10px;
+    @media screen and (max-width: 700px){
+        width: 80%;
+    }
 `
 export const EachProdImg = styled.img`
     width: 80%;

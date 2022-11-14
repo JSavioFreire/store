@@ -43,7 +43,9 @@ export const User = styled.div`
     flex-direction: column;
     cursor: pointer;
     transition: 0.1s;
-
+    @media screen and (max-width: 700px){
+        display: none;
+    }
     :hover{
         color: var(--colorCompLight);
     }
@@ -56,7 +58,9 @@ export const Cart = styled.div`
     flex-direction: column;
     cursor: pointer;
     transition: 0.1s;
-
+    @media screen and (max-width: 700px){
+        display: none;
+    }
     :hover{
         color: var(--colorCompLight);
     }
@@ -151,5 +155,19 @@ export const Exit = styled.div`
     font-size: 50px;
     cursor: pointer;
     color: red;
-
+`
+export const Total = styled.div`
+    margin-top: 20px;
+`
+export const FlexBottom = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+`
+export const Strong = styled.p`
+    font-size: 22px;
+    margin-top: -5px;
+`
+export const Div = styled.div`
 `

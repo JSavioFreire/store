@@ -8,6 +8,9 @@ export const MenuAll = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    @media screen and (max-width: 700px){
+        display: none;
+    }
 `
 export const EachMenu = styled.div`
     font-size: 20px;
