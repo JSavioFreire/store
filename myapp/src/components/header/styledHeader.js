@@ -12,7 +12,15 @@ export const HeaderAll = styled.div`
 export const Logo = styled.div`
     width: 20%;
     height: 70px;
-    background-color: var(--colorBlue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    text-shadow: 0 0 7px var(--colorBlue);
+    color: var(--colorWhite);
+    color: white;
+    font-family: 'Teko', sans-serif;
+    font-weight: 700;
 `
 export const InputSeach = styled.input`
     width: 50%;

@@ -34,7 +34,7 @@ export default function Header({itensCart}){
     return(
         <HeaderAll>
             <Eighty>
-                <Logo>Logo</Logo>
+                <Logo>PantufasBrothers</Logo>
                 <InputSeach placeholder="O que você está procurando?"/>
                 <RightHeader>
                     <MenuMobile onClick={()=>{setMenuMobile(true)}}><IoMdMenu/></MenuMobile>
