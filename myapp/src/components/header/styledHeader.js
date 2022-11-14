@@ -142,3 +142,14 @@ export const Flex = styled.div`
     align-items: center;
     flex-direction: column;
 `
+export const Exit = styled.div`
+    position: absolute;
+    top: 0;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+    cursor: pointer;
+    color: red;
+
+`

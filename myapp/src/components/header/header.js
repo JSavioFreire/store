@@ -1,6 +1,7 @@
-import { HeaderAll,Logo,InputSeach,RightHeader,User,Icon,MyC,Cart,CartOpen,TitleCart,ItensCarts,Emptys,BtPay,Flex } from "./styledHeader"
+import { HeaderAll,Logo,InputSeach,RightHeader,User,Icon,MyC,Cart,CartOpen,TitleCart,ItensCarts,Emptys,BtPay,Flex,Exit } from "./styledHeader"
 import { Eighty } from "../../styleGlobal/styleGlobal"
 import {RiUserLine} from 'react-icons/ri'
+import {AiFillCloseCircle} from 'react-icons/ai'
 import {BsCart2} from 'react-icons/bs'
 import { useEffect, useState } from "react"
 import EachItemCart from "./EachItemCart"
@@ -11,6 +12,7 @@ export default function Header({itensCart}){
     const [empty, setEmpty] = useState(true)
     const lengthCart = itensCart.length
 
+    
 
     useEffect(()=>{
         if(lengthCart === 0){
@@ -20,11 +22,6 @@ export default function Header({itensCart}){
             setEmpty(false)
         }
     },[itensCart])
-    
-    const OpenCart = ()=>{
-        setCartOpening(true)
-    }
-
 
     return(
         <HeaderAll>
@@ -40,7 +37,8 @@ export default function Header({itensCart}){
                             Minha Conta
                         </MyC>
                     </User>
-                    <Cart onClick={OpenCart}>
+                    <Cart onClick={()=>{setCartOpening(true)
+}}>
                         <Icon>
                             <BsCart2/>
                         </Icon>
@@ -52,6 +50,7 @@ export default function Header({itensCart}){
             </Eighty>
             {cartOpening && (
             <CartOpen>
+                <Exit onClick={()=>{setCartOpening(false)}}><AiFillCloseCircle/></Exit>
                 <TitleCart>Meu Carrinho</TitleCart>
                 <ItensCarts>
                     {empty ?
