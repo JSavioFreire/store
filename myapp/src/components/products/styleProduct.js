@@ -32,7 +32,6 @@ export const EachProd = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
-    cursor: pointer;
     justify-content: center;
     padding-top: 10px;
     @media screen and (max-width: 700px){
@@ -80,7 +79,8 @@ export const BtAddCart = styled.div`
     padding: 0 5px;
     border: 2px solid var(--colorBlue);
     background-color: var(--colorWhite);
-    transition: .5s;
+    transition: .2s;
+    cursor: pointer;
     text-align: center;
     :hover{
         background-color: var(--colorBlue);
@@ -88,7 +88,7 @@ export const BtAddCart = styled.div`
         color: white;
     }
 `
-export const BtBuy = styled.span`
+export const BtBuy = styled.a`
     font-size: 18px;
     padding: 5px 8px;
     border-radius: 10px;
@@ -96,7 +96,9 @@ export const BtBuy = styled.span`
     box-shadow: 0 0 15px var(--colorBlue);
     color: white;
     border: 2px solid var(--colorBlue);
-    transition: .5s;
+    transition: .2s;
+    text-decoration: none;
+    cursor: pointer;
     :hover{
         background-color: var(--colorWhite);
         color: var(--colorBlue);

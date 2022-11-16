@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const MenuAll = styled.div`
     width: 100%;
     height: 50px;
-    background-color: var(--colorLightGray);
+    background-color: var(--colorDarkGray);
     margin-top: 0;
     display: flex;
     align-items: center;

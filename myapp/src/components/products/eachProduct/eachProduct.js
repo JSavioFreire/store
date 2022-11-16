@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { EachProd,EachProdImg,AboutProduct,TitleProduct,PriceProduct,SplitProduct,Val,BtAddCart,BtBuy,Bt } from "../styleProduct"
 import {BsCart2} from 'react-icons/bs'
+import { Link } from "react-router-dom"
 
 const EachProduct = ({ price, img, name, addCart, products}) => {
   const [split, setSplit] = useState()
@@ -43,7 +44,9 @@ const EachProduct = ({ price, img, name, addCart, products}) => {
         </AboutProduct>
         <Bt>
               <BtAddCart onClick={()=>{addCart(products)}}><BsCart2/></BtAddCart>
-              <BtBuy>Compre agora</BtBuy>
+              <Link style={{ textDecoration: 'none' }} to={`/product/${products.id}`}>
+                <BtBuy>Mais Detalhes</BtBuy>
+              </Link>
             </Bt>
     </EachProd>
   )
